@@ -7,6 +7,7 @@ object Versions {
     val coroutines_version = "1.6.4"
     val kotlin_version = "1.3.41"
     val desugar_version = "1.1.5"
+    val compose_multiplatform = "1.1.0"
     val compose_version = "1.2.1"
     val compose_compile_version = "1.3.0"
     val compose_navigation = "2.5.1"
@@ -118,4 +119,7 @@ object koinDependencies{
     val ktor = "io.insert-koin:koin-ktor:${Versions.koin_version}"
 }
 
+object multiplatformComposeDependencies{
+    val core = "io.insert-koin:koin-core:${Versions.koin_version}"
+}
 

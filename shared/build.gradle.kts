@@ -7,6 +7,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("kotlinx-serialization")
+    id("org.jetbrains.compose") version "1.2.0-alpha01-dev774"
 }
 
 kotlin {
@@ -42,6 +43,13 @@ kotlin {
                 // DI
                 implementation(koinDependencies.core)
                 implementation(koinDependencies.android)
+                // Compose
+                api(compose.runtime)
+                api(compose.foundation)
+                api(compose.material)
+                // Needed only for preview.
+                implementation(compose.preview)
+
 
             }
         }
