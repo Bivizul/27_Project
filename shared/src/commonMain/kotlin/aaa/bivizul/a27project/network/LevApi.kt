@@ -32,6 +32,7 @@ class LevApi {
         val url = "http://65.109.10.118/27Project/leverages.json"
         val response = client.get(url)
         val body = response.body<Leverages>()
+        println("getLeverages response : $response")
         return body
     }
 
@@ -41,6 +42,7 @@ class LevApi {
             contentType(ContentType.Application.Json)
             setBody(leveges)
         }
+        println("getLevegesres response : $response")
         val body = response.body<Levegesres>()
         return body
     }

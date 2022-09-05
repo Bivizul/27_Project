@@ -11,18 +11,14 @@ class LeveragesRepository {
 
     private val levApi = LevApi()
 
-    private val _leverages = MutableSharedFlow<Leverages>()
-    val leverages: SharedFlow<Leverages> = _leverages.asSharedFlow()
+    suspend fun getLeverages() = levApi.getLeverages()
 
-//    init {
-//
-//        val response = levApi.getLeverages()
-//        _leverages.emit(response)
-//    }
+    /*private val _leverages = MutableSharedFlow<Leverages>()
+    val leverages: SharedFlow<Leverages> = _leverages.asSharedFlow()
 
     suspend fun getContics() {
         val response = levApi.getLeverages()
         _leverages.emit(response)
-    }
+    }*/
 
 }

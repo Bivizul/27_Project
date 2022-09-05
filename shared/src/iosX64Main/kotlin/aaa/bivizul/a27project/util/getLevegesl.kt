@@ -20,7 +20,7 @@ actual fun getLevegest(): String {
     TODO("Not yet implemented")
 }
 
-actual fun getLevegedia(contextAny: Any) {
+actual fun getLevegedia(contextAny: Any, activityAny: Any) {
 }
 
 actual fun checkLevegenet(contextAny: Any): Boolean {

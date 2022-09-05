@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme"
         android:dataExtractionRules="@xml/data_extraction_rules">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
