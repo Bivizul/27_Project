@@ -1,4 +1,4 @@
-package aaa.bivizul.a27project.ui.leverages.theme
+package aaa.bivizul.a27project.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

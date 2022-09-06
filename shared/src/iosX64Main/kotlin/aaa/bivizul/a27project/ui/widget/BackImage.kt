@@ -4,5 +4,5 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-actual inline fun BackImage(modifier: Modifier, url: String) {
+actual inline fun BackImage(modifier: Modifier) {
 }
