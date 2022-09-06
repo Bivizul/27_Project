@@ -1,7 +1,5 @@
-import aaa.bivizul.a27project.buildSrc.koinDependencies
-import aaa.bivizul.a27project.buildSrc.ktorDependencies
+import aaa.bivizul.a27project.buildSrc.*
 
-//import aaa.bivizul.a27project.buildSrc
 
 plugins {
     kotlin("multiplatform")
@@ -27,30 +25,34 @@ kotlin {
         val commonMain by getting{
             dependencies {
                 //Network
-                implementation(ktorDependencies.core)
-                implementation(ktorDependencies.logging)
-                implementation(ktorDependencies.negotiation)
-                implementation(ktorDependencies.json)
-                implementation(ktorDependencies.cio)
+                implementation(Ktor.core)
+                implementation(Ktor.logging)
+                implementation(Ktor.negotiation)
+                implementation(Ktor.json)
+                implementation(Ktor.cio)
                 //Coroutines
-                implementation(aaa.bivizul.a27project.buildSrc.kotlinCoroutinesDependencies.core)
+                implementation(KotlinCoroutines.core)
                 //Logger
-                implementation(aaa.bivizul.a27project.buildSrc.utilDependencies.napier)
+                implementation(Util.napier)
                 //JSON
-                implementation(aaa.bivizul.a27project.buildSrc.kotlinDependencies.serialization)
+                implementation(kotlinDependencies.serialization)
                 //Key-Value storage
-                implementation(aaa.bivizul.a27project.buildSrc.utilDependencies.settings)
+                implementation(Util.settings)
                 // DI
-                implementation(koinDependencies.core)
-                implementation(koinDependencies.android)
+                implementation(Koin.core)
+                implementation(Koin.android)
                 // Compose
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
                 // Needed only for preview.
                 implementation(compose.preview)
-
-
+                //Navigation
+                implementation(ComposeUtils.navigation)
+                // Log
+                implementation("io.github.aakira:napier:[latest version]")
+                // Coil
+                implementation(Coil.coil)
             }
         }
         val commonTest by getting {
@@ -92,6 +94,9 @@ android {
         coreLibraryDesugaring(aaa.bivizul.a27project.buildSrc.androidxsupportDependencies.desugar)
     }
 
+}
+dependencies {
+    implementation("androidx.navigation:navigation-common-ktx:2.4.1")
 }
 //dependencies {
 //    implementation(project(mapOf("path" to ":androidApp")))

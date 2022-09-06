@@ -1,6 +1,6 @@
 package aaa.bivizul.a27project.viewmodel
 
-import aaa.bivizul.a27project.LevRepository.LevegesRepository
+import aaa.bivizul.a27project.levRepository.LevegesRepository
 import com.bivizul.whenshouldyouplacebetsinsportsbetting.entity.Leveges
 import com.bivizul.whenshouldyouplacebetsinsportsbetting.entity.Levegesres
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -15,6 +15,7 @@ class LevegesViewModel {
     val levegesres: SharedFlow<Levegesres> = _levegesres.asSharedFlow()
 
     suspend fun getLeveges(leveges: Leveges) {
+        println("LevegesViewModel")
 //        viewModelScope.launch {
             val response = repository.getLeveges(leveges = leveges)
             _levegesres.emit(response)

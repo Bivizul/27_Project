@@ -1,4 +1,4 @@
-package aaa.bivizul.a27project.ui.theme
+package aaa.bivizul.a27project.ui.leverages.theme
 
 import androidx.compose.ui.graphics.Color
 

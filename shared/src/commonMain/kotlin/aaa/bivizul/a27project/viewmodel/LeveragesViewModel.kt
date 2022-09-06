@@ -1,6 +1,6 @@
 package aaa.bivizul.a27project.viewmodel
 
-import aaa.bivizul.a27project.LevRepository.LeveragesRepository
+import aaa.bivizul.a27project.levRepository.LeveragesRepository
 import aaa.bivizul.a27project.model.Leverages
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow

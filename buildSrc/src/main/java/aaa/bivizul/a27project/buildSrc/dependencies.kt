@@ -64,7 +64,7 @@ object composeDependencies {
     val material = "androidx.compose.material:material:${Versions.compose_version}"
 }
 
-object composeUtilsDependencies {
+object ComposeUtils {
     val coil = "io.coil-kt:coil-compose:${Versions.coil_version}"
     val activity = "androidx.activity:activity-compose:${Versions.activity_compose_version}"
     val navigation = "androidx.navigation:navigation-compose:${Versions.compose_navigation}"
@@ -82,7 +82,7 @@ object otherDependencies {
     val onesignal = "com.onesignal:OneSignal:${Versions.onesignal_version}"
 }
 
-object ktorDependencies {
+object Ktor {
     val core = "io.ktor:ktor-client-core:${Versions.ktor_version}"
     val logging = "io.ktor:ktor-client-logging:${Versions.ktor_version}"
     val cio = "io.ktor:ktor-client-cio:${Versions.ktor_version}"
@@ -99,18 +99,18 @@ object kotlinDependencies {
         "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.serialization_version}"
 }
 
-object kotlinCoroutinesDependencies {
+object KotlinCoroutines {
     val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines_version}"
     val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines_version}"
 }
 
-object utilDependencies {
+object Util {
     val napier = "io.github.aakira:napier:${Versions.napier_version}"
     val settings = "com.russhwolf:multiplatform-settings:${Versions.settings_version}"
 
 }
 
-object koinDependencies{
+object Koin{
     val core = "io.insert-koin:koin-core:${Versions.koin_version}"
     val android = "io.insert-koin:koin-android:${Versions.koin_version}"
     val compat = "io.insert-koin:koin-android-compat:${Versions.koin_version}"
@@ -122,4 +122,43 @@ object koinDependencies{
 object multiplatformComposeDependencies{
     val core = "io.insert-koin:koin-core:${Versions.koin_version}"
 }
+
+object Coil {
+    val coil = "io.coil-kt:coil:${Versions.coil_version}"
+}
+
+
+object ArkIvanov {
+    object MVIKotlin {
+        private const val VERSION = "3.0.0-beta01"
+        const val rx = "com.arkivanov.mvikotlin:rx:$VERSION"
+        const val mvikotlin = "com.arkivanov.mvikotlin:mvikotlin:$VERSION"
+        const val mvikotlinMain = "com.arkivanov.mvikotlin:mvikotlin-main:$VERSION"
+        const val mvikotlinLogging = "com.arkivanov.mvikotlin:mvikotlin-logging:$VERSION"
+        const val mvikotlinTimeTravel = "com.arkivanov.mvikotlin:mvikotlin-timetravel:$VERSION"
+        const val mvikotlinExtensionsReaktive = "com.arkivanov.mvikotlin:mvikotlin-extensions-reaktive:$VERSION"
+    }
+
+    object Decompose {
+        private const val VERSION = "0.5.1"
+        const val decompose = "com.arkivanov.decompose:decompose:$VERSION"
+        const val extensionsCompose = "com.arkivanov.decompose:extensions-compose-jetbrains:$VERSION"
+    }
+
+    object Essenty {
+        private const val VERSION = "0.2.2"
+        const val lifecycle = "com.arkivanov.essenty:lifecycle:$VERSION"
+    }
+}
+
+object Badoo {
+    object Reaktive {
+        private const val VERSION = "1.2.1"
+        const val reaktive = "com.badoo.reaktive:reaktive:$VERSION"
+        const val reaktiveTesting = "com.badoo.reaktive:reaktive-testing:$VERSION"
+        const val utils = "com.badoo.reaktive:utils:$VERSION"
+        const val coroutinesInterop = "com.badoo.reaktive:coroutines-interop:$VERSION"
+    }
+}
+
 

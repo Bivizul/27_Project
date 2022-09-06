@@ -1,30 +1,37 @@
 package aaa.bivizul.a27project.ui.leveges
 
+import aaa.bivizul.a27project.navigation.Destination
+import aaa.bivizul.a27project.navigation.NavController
+import aaa.bivizul.a27project.navigation.navigate
+import aaa.bivizul.a27project.ui.widget.CircularProgress
 import aaa.bivizul.a27project.util.*
 import aaa.bivizul.a27project.viewmodel.LevegesViewModel
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Button
-import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.bivizul.whenshouldyouplacebetsinsportsbetting.entity.Leveges
+import io.github.aakira.napier.Napier
+import io.github.aakira.napier.log
+import kotlinx.coroutines.delay
 
 @Composable
 fun LevegesScreen(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
-//    navigateScreen: Unit,
+    navController: NavController,
     context: Any,
     activity: Any,
+    levegesViewModel: LevegesViewModel,
 ) {
-    val context = context
-    val activity = activity
-    val levegesViewModel = LevegesViewModel()
+
+    Napier.d(tag = "qwer", message = "LevegesScreen")
+    log(tag = "qwer") { "LevegesScreen log" }
+
+//    val context = context
+//    val activity = activity
+//    val levegesViewModel = LevegesViewModel()
 //    val levegesRepository = LevegesRepository()
 
     LaunchedEffect(Unit) {
@@ -46,32 +53,27 @@ fun LevegesScreen(
     val levegesres by levegesViewModel.levegesres.collectAsState(null)
     println("levegesres : $levegesres")
 
-    levegesres?.levegesres?.let {
-        if (it == "no") {
-            println("levegesres NO")
-//            navigateScreen
-        } else if (it == "nopush") {
-            println("levegesres NOPUSH")
-//            OneSignal.disablePush(true)
-//            navigateScreen
-        } else {
-            println("levegesres ELSE")
-//            val spliskantent = Intent(activity, SpliskaActivity::class.java)
-//            spliskantent.putExtra(KEY_SPLISKA, it)
-//            activity.startActivity(spliskantent)
-//            navigateScreen
-        }
-    }
-
-    Box(modifier) {
-        Column {
-            Text(text = "LevegesScreen")
-            Button(
-                onClick = onClick
-            ) {
-                Text("Main")
+    if (levegesres != null){
+        levegesres?.levegesres?.let {
+            if (it == "no") {
+                LaunchedEffect(Unit) {
+                    delay(1000)
+                    navController.navigate(Destination.Main.route)
+                }
+            } else if (it == "nopush") {
+                LaunchedEffect(Unit) {
+                    delay(1000)
+                    navController.navigate(Destination.Main.route)
+                }
+            } else {
+                println("levegesres ELSE")
+                LaunchedEffect(Unit) {
+                    delay(1000)
+                    navController.navigate(Destination.Main.route)
+                }
             }
-            CircularProgressIndicator()
         }
+    } else{
+        CircularProgress()
     }
 }
