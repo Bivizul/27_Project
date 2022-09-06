@@ -1,25 +1,16 @@
 package aaa.bivizul.a27project.android
 
+import aaa.bivizul.a27project.util.Levconst.ONESIGNAL_APP_ID
 import android.app.Application
-import android.content.Context
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
+import com.onesignal.OneSignal
 
 class A27PApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        A27PApp.appContext = applicationContext
 
-        startKoin {
-            androidContext(this@A27PApp)
-        }
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE)
+        OneSignal.initWithContext(this)
+        OneSignal.setAppId(ONESIGNAL_APP_ID)
     }
-
-
-
-    companion object {
-        lateinit  var appContext: Context
-    }
-
 }

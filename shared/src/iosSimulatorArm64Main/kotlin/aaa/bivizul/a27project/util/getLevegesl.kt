@@ -26,3 +26,9 @@ actual fun getLevegedia(contextAny: Any, activityAny: Any) {
 actual fun checkLevegenet(contextAny: Any): Boolean {
     TODO("Not yet implemented")
 }
+
+actual fun levSignalOff() {
+}
+
+actual fun levscreenExit(activityAny: Any) {
+}

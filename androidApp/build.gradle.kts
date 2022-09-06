@@ -5,7 +5,6 @@ plugins {
     id("com.android.application")
     id("com.onesignal.androidsdk.onesignal-gradle-plugin")
     id("kotlin-parcelize")
-
 }
 
 android {
@@ -29,7 +28,6 @@ android {
         kotlinCompilerExtensionVersion = androidConfigVersion.compose_compile
     }
     compileOptions {
-        // Flag to enable support for the new language APIs
         isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -57,15 +55,5 @@ dependencies {
     implementation(accompanistDependencies.webview)
     implementation(Koin.core)
     implementation(Koin.android)
-
-
-//    implementation(ArkIvanov.MVIKotlin.mvikotlin)
-//    implementation(ArkIvanov.MVIKotlin.mvikotlinMain)
-//    implementation(ArkIvanov.MVIKotlin.mvikotlinLogging)
-//    implementation(ArkIvanov.MVIKotlin.mvikotlinTimeTravel)
-//    implementation(ArkIvanov.Decompose.decompose)
-//    implementation(ArkIvanov.Decompose.extensionsCompose)
-
-//    implementation(composeUtilsDependencies.navigation)
 
 }

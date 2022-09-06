@@ -6,6 +6,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.telephony.TelephonyManager
 import android.util.Log
+import com.onesignal.OneSignal
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.contracts.contract
@@ -79,4 +80,13 @@ actual fun checkLevegenet(contextAny: Any): Boolean {
     return networkInfo != null && networkInfo.isConnected
 }
 
+actual fun levSignalOff() {
+    OneSignal.disablePush(true)
+}
 
+
+actual fun levscreenExit(activityAny: Any) {
+    val activity = activityAny as Activity
+    activity.finish()
+    System.exit(0)
+}

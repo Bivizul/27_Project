@@ -25,7 +25,6 @@ fun LevNavGraph(
     NavHost(navController = navHostController, startDestination = startDestination) {
         composable(route = startDestination) {
             LevegesScreen(
-                onClick = { navHostController.navigate(Destination.Main.route) },
                 navController = navHostController,
                 context = context,
                 activity = activity,

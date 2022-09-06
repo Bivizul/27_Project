@@ -15,7 +15,6 @@ import androidx.compose.ui.Modifier
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         if (checkLevegenet(this)) {
             setContent {
                 Scaffold(

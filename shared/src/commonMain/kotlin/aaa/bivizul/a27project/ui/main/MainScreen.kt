@@ -9,6 +9,7 @@ import aaa.bivizul.a27project.ui.theme.Typography
 import aaa.bivizul.a27project.ui.widget.BackImage
 import aaa.bivizul.a27project.ui.widget.ButtonLev
 import aaa.bivizul.a27project.ui.widget.CircularProgress
+import aaa.bivizul.a27project.util.Levconst.NAME_APP
 import aaa.bivizul.a27project.viewmodel.LeveragesViewModel
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -32,8 +33,6 @@ fun MainScreen(
     modifier: Modifier = Modifier,
     navController: NavController
 ) {
-    println("MainScreen")
-
     Surface(
         modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
@@ -43,7 +42,7 @@ fun MainScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Name Project",
+                text = NAME_APP,
                 style = Typography.h3
             )
             ButtonLev(
@@ -53,11 +52,4 @@ fun MainScreen(
             )
         }
     }
-
-
-
-
-
-
-
 }

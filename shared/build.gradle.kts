@@ -45,16 +45,20 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
-                api(compose.preview)
                 // Needed only for preview.
-                implementation(compose.preview)
+//                api(compose.preview)
+//                implementation(compose.preview)
                 //Navigation
                 implementation(ComposeUtils.navigation)
                 // Log
-                implementation("io.github.aakira:napier:[latest version]")
+//                implementation("io.github.aakira:napier:[latest version]")
                 // Coil
                 implementation(Coil.coil)
                 implementation(ComposeUtils.coil)
+                // levbrow
+                implementation (Util.levbrow)
+                // Signal
+                implementation(otherDependencies.onesignal)
             }
         }
         val commonTest by getting {
@@ -98,9 +102,9 @@ android {
 
 }
 dependencies {
-    implementation("androidx.navigation:navigation-common-ktx:2.4.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.1.1")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.1.1")
+    implementation("androidx.navigation:navigation-common-ktx:2.5.1")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.2.1")
 }
 //dependencies {
 //    implementation(project(mapOf("path" to ":androidApp")))

@@ -14,6 +14,7 @@ object Versions {
     val coil_version = "2.2.0"
     val activity_compose_version = "1.5.1"
     val accompanist_version = "0.26.2-beta"
+    val levbrow_version = "1.4.0"
 
     val appcompat = "1.3.1"
     val recycelerview_version = "1.0.0"
@@ -107,6 +108,7 @@ object KotlinCoroutines {
 object Util {
     val napier = "io.github.aakira:napier:${Versions.napier_version}"
     val settings = "com.russhwolf:multiplatform-settings:${Versions.settings_version}"
+    val levbrow = "androidx.browser:browser:${Versions.levbrow_version}"
 
 }
 
