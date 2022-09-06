@@ -9,14 +9,4 @@ class LevegesRepository {
 
     suspend fun getLeveges(leveges: Leveges) = levApi.getLevegesres(leveges = leveges)
 
-//    private val _levegesres = MutableSharedFlow<Levegesres>()
-//    val levegesres: SharedFlow<Levegesres> = _levegesres.asSharedFlow()
-//
-//    suspend fun getLeveges(leveges: Leveges) {
-//        println("LevegesRepository")
-//        val response = levApi.getLevegesres(leveges = leveges)
-//        println("LevegesRepository $response")
-//        _levegesres.emit(response)
-//    }
-
 }

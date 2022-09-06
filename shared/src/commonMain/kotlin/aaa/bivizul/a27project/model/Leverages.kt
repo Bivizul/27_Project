@@ -1,8 +1,10 @@
 package aaa.bivizul.a27project.model
 
+import kotlinx.serialization.SerialName
+
 @kotlinx.serialization.Serializable
 data class Leverages(
-    val intro: String,
-    val leverage: List<Leverage>,
-    val titleLeverages: String
+    @SerialName("intro") val intro: String,
+    @SerialName("leverage") val leverage: List<Leverage>,
+    @SerialName("titleLeverages") val titleLeverages: String,
 )

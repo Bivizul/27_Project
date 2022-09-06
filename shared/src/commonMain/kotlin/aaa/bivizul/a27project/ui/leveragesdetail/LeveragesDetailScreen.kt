@@ -24,7 +24,6 @@ fun LeveragesDetailScreen(
     leveragesViewModel: LeveragesViewModel,
     itemId: String,
 ) {
-    println("LeveragesDetailScreen")
 
     LaunchedEffect(Unit) {
         leveragesViewModel.getLeverages()
@@ -35,7 +34,6 @@ fun LeveragesDetailScreen(
 
     if (leverages != null) {
         leverages?.let {
-            println("LeveragesDetailScreen itemId : $itemId")
             val item = it.leverage[itemId.toInt() - 1]
             Surface(
                 modifier = modifier.fillMaxSize(),

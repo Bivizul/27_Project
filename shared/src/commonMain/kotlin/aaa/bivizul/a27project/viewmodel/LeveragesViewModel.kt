@@ -14,11 +14,8 @@ class LeveragesViewModel {
     val leverages: SharedFlow<Leverages> = _leverages.asSharedFlow()
 
     suspend fun getLeverages() {
-//        viewModelScope.launch {
-            val response = repository.getLeverages()
-            _leverages.emit(response)
-//        }
-
+        val response = repository.getLeverages()
+        _leverages.emit(response)
     }
 
 }

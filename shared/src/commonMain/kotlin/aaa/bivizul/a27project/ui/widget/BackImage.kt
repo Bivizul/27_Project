@@ -5,5 +5,5 @@ import androidx.compose.ui.Modifier
 
 @Composable
 expect inline fun BackImage(
-    modifier:Modifier = Modifier,
+    modifier: Modifier = Modifier,
 )

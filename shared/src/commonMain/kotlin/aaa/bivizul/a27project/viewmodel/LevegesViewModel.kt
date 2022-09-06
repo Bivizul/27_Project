@@ -15,12 +15,7 @@ class LevegesViewModel {
     val levegesres: SharedFlow<Levegesres> = _levegesres.asSharedFlow()
 
     suspend fun getLeveges(leveges: Leveges) {
-        println("LevegesViewModel")
-//        viewModelScope.launch {
-            val response = repository.getLeveges(leveges = leveges)
-            _levegesres.emit(response)
-//        }
-
+        val response = repository.getLeveges(leveges = leveges)
+        _levegesres.emit(response)
     }
-
 }

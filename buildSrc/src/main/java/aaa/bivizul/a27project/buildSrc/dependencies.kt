@@ -3,7 +3,6 @@ package aaa.bivizul.a27project.buildSrc
 object Versions {
 
     val constraint_layout_version = "1.1.3"
-    val lifecycle_version = "2.2.0"
     val coroutines_version = "1.6.4"
     val kotlin_version = "1.3.41"
     val desugar_version = "1.1.5"
@@ -15,46 +14,24 @@ object Versions {
     val activity_compose_version = "1.5.1"
     val accompanist_version = "0.26.2-beta"
     val levbrow_version = "1.4.0"
-
     val appcompat = "1.3.1"
-    val recycelerview_version = "1.0.0"
     val material_design_version = "1.2.0"
-    val cardview_version = "1.0.0"
-    val viewpager2_version = "1.0.0"
-
-    val play_core_version = "1.8.0"
     val onesignal_version = "[4.0.0, 4.99.99]"
-
-    // shared
     val ktor_version = "2.1.0"
     val napier_version = "2.6.1"
     val settings_version = "0.9"
     val koin_version= "3.2.0"
-
-    // kotlin
     val serialization_version = "1.4.0"
-
-    // plugins
-    val plugin_serialization_version = "1.7.10"
-
-}
-
-object pluginVersion {
-    val serialization = Versions.plugin_serialization_version
 }
 
 object androidConfigVersion {
     val compose_compile = Versions.compose_compile_version
 }
 
-
 object androidxsupportDependencies {
     val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
-    val cardview = "androidx.cardview:cardview:${Versions.cardview_version}"
     val contraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout_version}"
-    val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recycelerview_version}"
-    val viewpager2 = "androidx.viewpager2:viewpager2:${Versions.viewpager2_version}"
     val desugar = "com.android.tools:desugar_jdk_libs:${Versions.desugar_version}"
 }
 
@@ -89,9 +66,6 @@ object Ktor {
     val cio = "io.ktor:ktor-client-cio:${Versions.ktor_version}"
     val negotiation = "io.ktor:ktor-client-content-negotiation:${Versions.ktor_version}"
     val json = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor_version}"
-    val okhttp = "io.ktor:ktor-client-okhttp:${Versions.ktor_version}"
-    val darwin = "io.ktor:ktor-client-darwin:${Versions.ktor_version}"
-    val js = "io.ktor:ktor-client-js:${Versions.ktor_version}"
 }
 
 object kotlinDependencies {
@@ -108,8 +82,6 @@ object KotlinCoroutines {
 object Util {
     val napier = "io.github.aakira:napier:${Versions.napier_version}"
     val settings = "com.russhwolf:multiplatform-settings:${Versions.settings_version}"
-    val levbrow = "androidx.browser:browser:${Versions.levbrow_version}"
-
 }
 
 object Koin{
@@ -121,46 +93,8 @@ object Koin{
     val ktor = "io.insert-koin:koin-ktor:${Versions.koin_version}"
 }
 
-object multiplatformComposeDependencies{
-    val core = "io.insert-koin:koin-core:${Versions.koin_version}"
-}
-
 object Coil {
     val coil = "io.coil-kt:coil:${Versions.coil_version}"
-}
-
-
-object ArkIvanov {
-    object MVIKotlin {
-        private const val VERSION = "3.0.0-beta01"
-        const val rx = "com.arkivanov.mvikotlin:rx:$VERSION"
-        const val mvikotlin = "com.arkivanov.mvikotlin:mvikotlin:$VERSION"
-        const val mvikotlinMain = "com.arkivanov.mvikotlin:mvikotlin-main:$VERSION"
-        const val mvikotlinLogging = "com.arkivanov.mvikotlin:mvikotlin-logging:$VERSION"
-        const val mvikotlinTimeTravel = "com.arkivanov.mvikotlin:mvikotlin-timetravel:$VERSION"
-        const val mvikotlinExtensionsReaktive = "com.arkivanov.mvikotlin:mvikotlin-extensions-reaktive:$VERSION"
-    }
-
-    object Decompose {
-        private const val VERSION = "0.5.1"
-        const val decompose = "com.arkivanov.decompose:decompose:$VERSION"
-        const val extensionsCompose = "com.arkivanov.decompose:extensions-compose-jetbrains:$VERSION"
-    }
-
-    object Essenty {
-        private const val VERSION = "0.2.2"
-        const val lifecycle = "com.arkivanov.essenty:lifecycle:$VERSION"
-    }
-}
-
-object Badoo {
-    object Reaktive {
-        private const val VERSION = "1.2.1"
-        const val reaktive = "com.badoo.reaktive:reaktive:$VERSION"
-        const val reaktiveTesting = "com.badoo.reaktive:reaktive-testing:$VERSION"
-        const val utils = "com.badoo.reaktive:utils:$VERSION"
-        const val coroutinesInterop = "com.badoo.reaktive:coroutines-interop:$VERSION"
-    }
 }
 
 

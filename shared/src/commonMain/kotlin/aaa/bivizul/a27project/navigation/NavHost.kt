@@ -5,13 +5,16 @@ import androidx.compose.runtime.Composable
 expect class Bundle {
     fun get(p0: String): Any?
 }
+
 expect class NavHostController {
     fun popBackStack(): Boolean
 }
+
 expect class NavGraphBuilder
 expect class NavBackStackEntry {
     val arguments: Bundle?
 }
+
 expect class NavDeepLink
 expect class NamedNavArgument
 expect class NavController
@@ -25,7 +28,7 @@ expect fun NavHost(
     navController: NavHostController,
     startDestination: String,
     route: String? = null,
-    builder: NavGraphBuilder.() -> Unit
+    builder: NavGraphBuilder.() -> Unit,
 )
 
 expect fun NavGraphBuilder.composable(
@@ -35,7 +38,7 @@ expect fun NavGraphBuilder.composable(
     trailingButton: @Composable (() -> Unit)? = null,
     arguments: List<NamedNavArgument> = emptyList(),
     deepLinks: List<NavDeepLink> = emptyList(),
-    content: @Composable (NavBackStackEntry) -> Unit
+    content: @Composable (NavBackStackEntry) -> Unit,
 )
 
 expect fun NavController.navigate(route: String, builder: NavOptionsBuilder.() -> Unit = {})

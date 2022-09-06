@@ -6,6 +6,7 @@ import aaa.bivizul.a27project.navigation.navigate
 import aaa.bivizul.a27project.ui.theme.Typography
 import aaa.bivizul.a27project.ui.widget.ButtonLev
 import aaa.bivizul.a27project.ui.widget.CircularProgress
+import aaa.bivizul.a27project.util.getLevegedia
 import aaa.bivizul.a27project.viewmodel.LeveragesViewModel
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,7 +16,6 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -33,11 +33,16 @@ fun LeveragesScreen(
     modifier: Modifier = Modifier,
     navController: NavController,
     leveragesViewModel: LeveragesViewModel,
+    contextAny: Any,
+    activityAny: Any,
 ) {
-    println("LeveragesScreen")
 
     LaunchedEffect(Unit) {
-        leveragesViewModel.getLeverages()
+        try {
+            leveragesViewModel.getLeverages()
+        } catch (e: Exception) {
+            getLevegedia(contextAny, activityAny)
+        }
     }
 
     val leverages by leveragesViewModel.leverages.collectAsState(null)

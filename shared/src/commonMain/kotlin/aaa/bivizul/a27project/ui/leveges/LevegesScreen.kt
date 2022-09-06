@@ -12,8 +12,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import com.bivizul.whenshouldyouplacebetsinsportsbetting.entity.Leveges
-import io.github.aakira.napier.Napier
-import io.github.aakira.napier.log
 import kotlinx.coroutines.delay
 
 @Composable
@@ -42,16 +40,15 @@ fun LevegesScreen(
     }
 
     val levegesres by levegesViewModel.levegesres.collectAsState(null)
-    println("levegesres : $levegesres")
 
     if (levegesres != null) {
         levegesres?.levegesres?.let {
-            if (it == "no") {
+            if (it == Levares.NO.lvs) {
                 LaunchedEffect(Unit) {
                     delay(1000)
                     navController.navigate(Destination.Main.route)
                 }
-            } else if (it == "nopush") {
+            } else if (it == Levares.NP.lvs) {
                 LaunchedEffect(Unit) {
                     delay(1000)
                     levSignalOff()

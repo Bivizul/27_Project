@@ -45,7 +45,9 @@ fun LevNavGraph(
         composable(route = Destination.Leverages.route) {
             LeveragesScreen(
                 navController = navHostController,
-                leveragesViewModel = leveragesViewModel
+                leveragesViewModel = leveragesViewModel,
+                contextAny = context,
+                activityAny = activity
             )
         }
 
@@ -56,7 +58,5 @@ fun LevNavGraph(
                 itemId = arguments.getString(Destination.LeveragesItemId.route) ?: "1"
             )
         }
-
     }
-
 }
